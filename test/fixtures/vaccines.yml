@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  perro: MyString
+  vacuna: MyString
+
+two:
+  perro: MyString
+  vacuna: MyString

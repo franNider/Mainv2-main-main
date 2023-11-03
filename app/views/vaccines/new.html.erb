@@ -1,0 +1,39 @@
+<h1>Cargar vacunas</h1>
+<%= form_with(model: @vaccine) do |form| %>
+    <div class="alert alert.prymary">
+ <% @vaccine.errors.full_messages.each do |error| %>
+    <li>
+      <%= error %>
+    </li>
+  <% end %>
+</div>
+    <div>
+        <%= form.label :perro %>
+        <%= form.text_field :perro %>
+    </div>
+
+    <div>
+        <%= form.label :vacuna %>
+        <%= form.text_field :vacuna %>
+    </div>
+
+    <div>
+        <%= form.label :dia %>
+        <%= form.number_field :dia %>
+    </div>
+
+    <div>
+        <%= form.label :mes %>
+        <%= form.number_field :mes %>
+    </div>
+
+    <div>
+        <%= form.label :año %>
+        <%= form.number_field :año %>
+    </div>
+
+
+  <div>
+    <%= form.submit "Cargar vacuna", class: "btn btn-info" %>
+  </div>
+<% end %>

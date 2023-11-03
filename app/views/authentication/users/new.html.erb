@@ -1,0 +1,45 @@
+<%= form_with(model: @user) do |form| %>
+ <div class="alert alert.prymary">
+ <% @user.errors.full_messages.each do |error| %>
+    <li>
+      <%= error %>
+    </li>
+  <% end %>
+</div>
+
+  <div>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :dni %>
+    <%= form.number_field :dni %>
+  </div>
+
+    <div>
+        <%= form.label :nombre %>
+        <%= form.text_field :nombre %>
+    </div>
+
+    <div>
+        <%= form.label :apellido %>
+        <%= form.text_field :apellido %>
+    </div>
+
+    <div> 
+         <%= form.label :rol %>
+         <%= form.select :rol, ["Usuario", "Administrador"]%>
+    </div>
+
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  
+
+  <div>
+    <%= form.submit "Guardar", class: "btn btn-info" %>
+  </div>
+<% end %>
